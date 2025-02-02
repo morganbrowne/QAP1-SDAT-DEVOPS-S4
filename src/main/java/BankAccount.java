@@ -6,6 +6,9 @@
 public class BankAccount {
     private String accountNumber;
     private int balance;
+    private int initialBalance;
+    private double lastDepositAmount = 0;
+    private double lastWithdrawalAmount = 0;
 
     public BankAccount(String accountNumber, int balance) {
         this.accountNumber = accountNumber;
@@ -17,6 +20,7 @@ public class BankAccount {
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
+            lastDepositAmount = amount;
         } else {
             throw new IllegalArgumentException("Deposit amount must be greater than 0. ");
         }
@@ -26,6 +30,7 @@ public class BankAccount {
     public void withdrawal(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
+            lastWithdrawalAmount = 0;
         } else {
             throw new IllegalArgumentException("Withdrawal amount cannot exceed balance. ");
         }
@@ -39,9 +44,18 @@ public class BankAccount {
         return accountNumber;
     }
 
-//    public double getDepositAmount(double amount) {
-//        return amount;
-//    }
+    // get method for last deposit and withdrawal accounts.
+    public double getLastDepositAmount() {
+        return lastDepositAmount;
+    }
+    public double getLastWithdrawalAmount() {
+        return  lastWithdrawalAmount;
+    }
+
+    public int getInitialBalance() {
+        return initialBalance;
+    }
+
 
 
 }
