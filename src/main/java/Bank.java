@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class Bank {
     private Map<String, BankAccount> accounts = new HashMap<>();
 
-    public void createAccount(String accountNumber, int initialBalance) {
+    public void createAccount(String accountNumber, double initialBalance) {
         if (!accounts.containsKey(accountNumber)) {
             accounts.put(accountNumber, new BankAccount(accountNumber, initialBalance));
         } else {

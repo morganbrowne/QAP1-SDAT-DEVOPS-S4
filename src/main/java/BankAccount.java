@@ -5,14 +5,15 @@
 
 public class BankAccount {
     private String accountNumber;
-    private int balance;
-    private int initialBalance;
+    private double balance;
+    private double initialBalance;
     private double lastDepositAmount = 0;
     private double lastWithdrawalAmount = 0;
 
-    public BankAccount(String accountNumber, int balance) {
+    public BankAccount(String accountNumber, double initialBalance) {
         this.accountNumber = accountNumber;
-        this.balance = balance;
+        this.balance = initialBalance;
+        this.initialBalance = initialBalance;
     }
 
 
@@ -30,7 +31,7 @@ public class BankAccount {
     public void withdrawal(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
-            lastWithdrawalAmount = 0;
+            lastWithdrawalAmount = amount;
         } else {
             throw new IllegalArgumentException("Withdrawal amount cannot exceed balance. ");
         }
@@ -52,7 +53,7 @@ public class BankAccount {
         return  lastWithdrawalAmount;
     }
 
-    public int getInitialBalance() {
+    public double getInitialBalance() {
         return initialBalance;
     }
 
