@@ -2,14 +2,13 @@ Documentation.
 
 Overview:
 For my QAP1 I choose the Simple Banking Application 
-This Application supports Account Creation including a account number and initial deposit, 
-- also supports regular deposits and withdraws. I added 3 test cases to ensure the app being run properly.
+This Application supports Account Creation including a account number and initial deposit, also supports regular deposits and withdraws. I added 3 test cases to ensure the app being run properly.
 
 
 Features: 
-A class for creating a bank account 
-A class to set up deposits and withdraws. 
-A class to display account details such as the Account Number, Initial Balnce, Amount Deopsited and Withdrawn, 
+- A class for creating a bank account 
+- A class to set up deposits and withdraws. 
+- A class to display account details such as the Account Number, Initial Balnce, Amount Deopsited and Withdrawn, 
 and the Current balance after all actions preformed. 
  
 Testing Files:
