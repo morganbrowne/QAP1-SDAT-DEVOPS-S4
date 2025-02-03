@@ -1,3 +1,10 @@
+/**
+ * Main Class:
+ * Creates a Bank Account
+ * Sets deposit and withdraw
+ * Displays account details.
+ */
+
 import java.text.NumberFormat;
 import java.util.Locale;
 
