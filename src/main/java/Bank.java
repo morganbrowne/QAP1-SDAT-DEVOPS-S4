@@ -12,7 +12,7 @@ public class Bank {
         if (!accounts.containsKey(accountNumber)) {
             accounts.put(accountNumber, new BankAccount(accountNumber, initialBalance));
         } else {
-            throw new IllegalArgumentException("Account Already Made.");
+            throw new IllegalArgumentException("Account Already Exists.");
         }
 
     }
